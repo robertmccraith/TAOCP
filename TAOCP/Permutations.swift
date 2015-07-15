@@ -13,10 +13,15 @@ class Permutations {
 	
 	func run(){
 		let permutationArray = ["(a,c,f,g)", "(b,c,d)","(a,e,d)","(f,a,d,e)","(b,g,f,a,e)"]
+		
 		print("before: "+"".join(permutationArray))
 		print("Algorithm A: "+multiply(permutationArray))
 		print("Algorithm B"+onePass(permutationArray))
-		
+
+		let numPerm = [6,2,1,5,4,3]
+		print("\n\nbefore \(numPerm)")
+		print("Algorithm I: \(inverseI(numPerm)) ")
+		print("Algorithm J: \(inverseJ(numPerm)) ")
 	}
 	
 	
@@ -183,5 +188,68 @@ class Permutations {
 		}
 		return "".join(ansArr)
 	}
+	
+	
+	//Algorithm I(inverse in place)
+	func inverseI(array :[Int])->[Int]{
+		var arr = array
+		var m = arr.count-1
+		var j = -1
+		
+		while m >= 0{
+			var i = arr[m]
+			while i > 0{
+				
+				arr[m] = j
+				j = -(m+1)
+				m = i-1
+				i = arr[m]
+				if i < 0 {
+					i=j
+				}
+			}
+
+			arr[m] = -i
+			m--
+
+		}
+		return arr
+	}
+	
+	
+	func inverseJ(array: [Int])->[Int]{
+		var arr = array
+		
+		//1 negate all
+		arr = arr.map({-$0})
+		var m = arr.count
+		
+		while m > 0{
+			//2
+			var j = m
+			
+			//3
+			var i = arr[j-1]
+			while i > 0 {
+				j = i
+				i = arr[j-1]
+			}
+			
+			//4
+			arr[j-1] = arr[-i-1]
+			arr[-i-1] = m
+			
+			m--
+		}
+	
+		
+		
+		
+		
+		
+		
+		return arr
+	}
+	
 	
 }

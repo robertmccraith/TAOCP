@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		151B71541B4954E800BB3B92 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151B71531B4954E800BB3B92 /* main.swift */; };
 		151B715B1B49550B00BB3B92 /* Permutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151B715A1B49550B00BB3B92 /* Permutations.swift */; };
+		15EC2DB81B5AC95B009BF1DE /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC2DB71B5AC95B009BF1DE /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		151B71501B4954E800BB3B92 /* TAOCP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TAOCP; sourceTree = BUILT_PRODUCTS_DIR; };
 		151B71531B4954E800BB3B92 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		151B715A1B49550B00BB3B92 /* Permutations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permutations.swift; sourceTree = "<group>"; };
+		15EC2DB71B5AC95B009BF1DE /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cards.swift; path = ../Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				151B71531B4954E800BB3B92 /* main.swift */,
+				15EC2DB71B5AC95B009BF1DE /* Cards.swift */,
 				151B715A1B49550B00BB3B92 /* Permutations.swift */,
 			);
 			path = TAOCP;
@@ -121,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15EC2DB81B5AC95B009BF1DE /* Cards.swift in Sources */,
 				151B71541B4954E800BB3B92 /* main.swift in Sources */,
 				151B715B1B49550B00BB3B92 /* Permutations.swift in Sources */,
 			);

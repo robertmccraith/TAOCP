@@ -11,3 +11,10 @@ import Foundation
 var perm = Permutations()
 perm.run()
 
+
+var link = Linked()
+link.createList()
+link.newTop(Card(suit: Card.Suit.spades, rank: 1, next: nil))
+link.rmtop()
+link.newBottom(Card(suit: Card.Suit.spades, rank: 1, next: nil))
+link.printDeck()
